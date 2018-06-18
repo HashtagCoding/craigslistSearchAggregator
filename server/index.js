@@ -3,7 +3,7 @@ const path = require('path');
 // const router = require('express').Router();
 // const router = require('./router/router.js')
 const IP = process.env.IP || 'localhost';
-const PORT = process.env.PORT || '3000';
+const PORT = process.env.PORT || '3002';
 const app = express();
 const bodyParser = require('body-parser');
 const api = require('../server/helpers/api');
@@ -22,6 +22,11 @@ app.get('/glassdoor/jobs', api.glassdoor.getGlassdoorJobs);
 // app.get('/indeed/jobs', api.indeed.getIndeedJobs);
 app.get('/links', api.links.getLinksFromDb);
 app.post('/links', api.links.postLinksToDb);
+
+// TODO: implement .route
+app.get('/reddit/new', api.reddit.getNewPosts);
+app.get('/reddit', api.reddit.getSavedPosts);
+app.get('/reddit/save', api.reddit.getAndSaveToDatabase);
 
 app.listen(PORT, (err) => {
   if (err) { return console.log('failure at app.listen in server/index =>', err); }

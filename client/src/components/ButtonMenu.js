@@ -2,7 +2,7 @@ import React from 'react';
 
 class ButtonMenu extends React.Component {
   componentDidMount() {
-    this.props.onClickGetJobs();
+    // this.props.onClickGetJobs();
   }
   render() {
     return (

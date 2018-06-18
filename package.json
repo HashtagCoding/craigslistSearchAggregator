@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack -d --watch",
     "build": "webpack -p",
-    "start": "nodemon server/index.js",
+    "start": "node server/index.js",
     "test": "jest",
     "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --content-base ./"
   },
@@ -57,11 +57,13 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "react-tap-event-plugin": "^2.0.1",
+    "redditwrap.js": "^7.0.0",
     "redux": "^3.7.2",
     "redux-devtools": "^3.4.0",
     "redux-thunk": "^2.2.0",
     "semantic-ui-less": "^2.2.11",
     "semantic-ui-react": "^0.71.2",
+    "snoowrap": "^1.15.2",
     "twitter": "^1.7.1",
     "webpack": "^3.5.4"
   },
